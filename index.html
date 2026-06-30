@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>奇境.ai · Logo · ABC 三方案审核</title>
+<style>
+:root{--card:#15151a;--line:rgba(255,255,255,.08);--ink:#f2f0ea;--ink2:#b8b6b0;--ink3:#8a887f;--gold:#e9bf5f;--ok:#6fbf8f;
+  --mono:"Geist Mono","SF Mono",ui-monospace,Menlo,monospace;--sans:"Geist","Noto Sans SC","PingFang SC",system-ui,sans-serif;--serif:"Source Serif 4","Noto Serif SC",Georgia,serif;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);color:var(--ink);background:#0a0a0c;-webkit-font-smoothing:antialiased;line-height:1.6}
+.wrap{max-width:1180px;margin:0 auto;padding:42px clamp(20px,5vw,44px) 80px}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+h1{font-family:var(--serif);font-size:clamp(22px,4vw,32px);font-weight:600;margin:12px 0 8px}
+.lead{color:var(--ink2);font-size:14px;max-width:850px;margin-bottom:8px}
+.lead b{color:var(--gold)}
+.plan{margin-top:30px;padding-top:20px;border-top:1px solid var(--line)}
+.grp{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.grp .e{font-family:var(--mono);font-size:14px;color:var(--gold);font-weight:700}
+.grp h2{font-family:var(--serif);font-size:20px;font-weight:600}
+.grp .d{font-size:13px;color:var(--ink3)}
+.sub{font-family:var(--mono);font-size:11px;color:var(--ink3);margin:14px 0 8px}
+.sub b{color:var(--gold)}
+.grid{display:flex;flex-wrap:wrap;gap:13px}
+.sw{display:flex;flex-direction:column;gap:6px;width:150px;flex:0 0 auto}
+.icon{border-radius:22.5%;overflow:hidden;display:block;width:100%;border:1px solid var(--line);background:#000;position:relative;aspect-ratio:1/1}
+.icon img{width:100%;height:100%;object-fit:cover;display:block}
+.icon .pending{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;color:var(--ink3);font-family:var(--mono);font-size:10px}
+.icon .pending .dot{width:24px;height:24px;border-radius:50%;border:2px solid rgba(231,200,120,.22);border-top-color:var(--gold);animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sw .lbl{font-family:var(--mono);font-size:10px;color:var(--ink3);text-align:center}
+/* ===== 真实场景轮播 ===== */
+.scenewrap{margin:18px 0 26px}
+.scenehint{font-family:var(--mono);font-size:11px;color:var(--ink3);margin-bottom:8px}
+.scenehint b{color:var(--gold)}
+.scenebox{display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 0}
+.navbtn{flex:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink2);font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s}
+.navbtn:hover{border-color:var(--gold);color:var(--gold);transform:scale(1.06)}
+.navbtn:active{transform:scale(.96)}
+.scenelabel{text-align:center;font-family:var(--mono);font-size:13px;color:var(--gold);margin-top:6px;font-weight:600}
+.scenes{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 16px;-webkit-overflow-scrolling:touch}
+.scenes::-webkit-scrollbar{height:7px}.scenes::-webkit-scrollbar-thumb{background:rgba(255,255,255,.14);border-radius:7px}
+.scene{scroll-snap-align:center;flex:0 0 auto;width:min(720px,84vw);border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#0c0c10}
+.scene .stage{height:430px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.scene .cap{font-family:var(--mono);font-size:12px;color:var(--ink2);padding:11px 15px;border-top:1px solid var(--line);background:var(--card)}
+.scene .cap b{color:var(--gold)}
+/* phone */
+.phone{width:228px;height:464px;border-radius:40px;background:#05060a;border:2px solid #23242c;box-shadow:0 24px 60px rgba(0,0,0,.55);position:relative;overflow:hidden}
+.phone .island{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:78px;height:21px;background:#000;border-radius:12px;z-index:6}
+.phone .sb{position:absolute;top:0;left:0;right:0;height:42px;display:flex;justify-content:space-between;align-items:center;padding:14px 20px 0;font:600 12px var(--sans);color:#fff;z-index:5}
+.hs{position:absolute;inset:0;background:radial-gradient(130% 90% at 50% 8%,#2a3060,#10142e 60%,#0a0c1c)}
+.hs .grid{position:absolute;top:58px;left:0;right:0;padding:0 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px 16px}
+.hs .ic{aspect-ratio:1/1;border-radius:24%;box-shadow:0 4px 10px rgba(0,0,0,.3)}
+.hs .ic.qj{box-shadow:0 0 0 2px rgba(231,200,120,.9),0 6px 16px rgba(0,0,0,.5)}
+.hs .ic img{width:100%;height:100%;object-fit:cover;border-radius:24%;display:block}
+.hs .lbl{font-size:8px;color:rgba(255,255,255,.85);text-align:center;margin-top:3px}
+.hs .dock{position:absolute;bottom:14px;left:14px;right:14px;height:74px;border-radius:28px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);display:flex;justify-content:space-around;align-items:center;padding:0 12px}
+.hs .dock .ic{width:48px}
+/* splash */
+.splash{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 35%,#26305e,#141838 55%,#0c0f26);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+.splash .lg{width:108px;height:108px;border-radius:26px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.splash .lg img{width:100%;height:100%;object-fit:cover;display:block}
+.splash .wm{font-family:var(--serif);font-size:30px;color:#fff;font-weight:600;letter-spacing:.5px}
+.splash .wm i{font-style:normal;color:var(--gold);font-size:.6em;font-weight:500}
+.splash .tg{font-size:12px;color:var(--night-ink2,#aab0d4);font-family:var(--sans)}
+/* browser */
+.browser{width:640px;border-radius:12px;overflow:hidden;border:1px solid #23242c;box-shadow:0 24px 60px rgba(0,0,0,.5);background:#0e1020}
+.browser .chrome{height:38px;background:#16182a;display:flex;align-items:center;gap:8px;padding:0 14px}
+.browser .chrome .dot{width:11px;height:11px;border-radius:50%}
+.browser .chrome .url{margin-left:10px;flex:1;height:22px;border-radius:11px;background:#0b0c18;color:#8a90b0;font:11px var(--mono);display:flex;align-items:center;padding:0 12px}
+.site{height:360px;background:radial-gradient(120% 100% at 80% 0%,#222a55,#12152e 55%,#0b0d1e);position:relative;padding:18px 26px}
+.site .nav{display:flex;align-items:center;gap:12px}
+.site .nav .lg{width:30px;height:30px;border-radius:9px;overflow:hidden}
+.site .nav .lg img{width:100%;height:100%;object-fit:cover;display:block}
+.site .nav .bn{font-family:var(--serif);font-size:17px;color:#fff;font-weight:600}
+.site .nav .bn i{font-style:normal;color:var(--gold);font-size:.7em}
+.site .nav .links{margin-left:auto;display:flex;gap:18px;font-size:12px;color:#aab0d4}
+.site .nav .cta{margin-left:16px;font-size:12px;color:#22182a;background:var(--gold);padding:6px 14px;border-radius:8px;font-weight:600}
+.site .hero{margin-top:54px;max-width:380px}
+.site .hero h3{font-family:var(--serif);font-size:18px;color:#cfd4e6;line-height:1.4;font-weight:500;opacity:.85}
+.site .hero p{font-size:13px;color:#aab0d4;margin-top:12px;line-height:1.6}
+.site .moon{position:absolute;right:-30px;bottom:-40px;width:300px;height:300px;border-radius:50%;overflow:hidden;opacity:.92}
+.site .moon img{width:100%;height:100%;object-fit:cover}
+/* appstore */
+.astore{position:absolute;inset:0;background:#0a0a0c;padding:26px;display:flex;flex-direction:column;gap:16px}
+.astore .row{display:flex;gap:16px;align-items:center}
+.astore .lg{width:88px;height:88px;border-radius:21px;overflow:hidden;flex:none;box-shadow:0 6px 18px rgba(0,0,0,.5)}
+.astore .lg img{width:100%;height:100%;object-fit:cover;display:block}
+.astore .meta .nm{font-family:var(--serif);font-size:21px;color:#fff;font-weight:600}
+.astore .meta .sub{font-size:13px;color:var(--ink3);margin-top:2px}
+.astore .meta .get{margin-top:10px;display:inline-block;font-size:13px;color:#fff;background:#1a8cff;padding:6px 22px;border-radius:999px;font-weight:600}
+.astore .shots{display:flex;gap:12px;margin-top:6px}
+.astore .shots span{flex:1;height:180px;border-radius:14px;background:linear-gradient(160deg,#1c2046,#0f1330);border:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">奇境.ai · Logo · ABC 三方案审核</div>
+  <h1>奇境 logo playground</h1>
+  <p class="lead">A 日食 · B 圆环 Q · C 满月 · D 暖月 · E 大写Q · F 单色几何Q · G 月光渐变</p>
+
+  <!-- 真实场景：官网 -->
+  <div class="scenewrap">
+    <div class="scenehint">★ <b>官网场景</b> · ◀ ▶ 切换上面的 logo（官网不动，只换 logo 看效果）</div>
+    <div class="scenebox">
+      <button class="navbtn" id="prevLogo">‹</button>
+      <div class="browser" style="width:min(680px,84vw)"><div class="chrome"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">qijing.ai</span></div>
+        <div class="site"><div class="nav"><span class="lg"><img id="navlogo" src="logo-gen/r21-gold-b.png" alt=""></span><span class="links"><span>Product</span><span>Pricing</span><span>About</span></span><span class="cta">Start</span></div>
+          <div class="hero"><h3 style="font-style:italic">A moon, a whale,<br>a quiet tide.</h3></div>
+          <div class="moon"><img id="moonlogo" src="logo-gen/r21-gold-b.png" alt=""></div></div>
+      </div>
+      <button class="navbtn" id="nextLogo">›</button>
+    </div>
+    <div class="scenelabel" id="logolabel">满月 · 金B</div>
+  </div>
+
+  <!-- A 日食 -->
+  <div class="plan">
+    <div class="grp"><span class="e">方案 A</span><h2 class="serif">日食环 Q</h2><span class="d">确认版·放回</span></div>
+    <div class="grid" id="A"></div>
+  </div>
+
+  <!-- B 圆环 -->
+  <div class="plan">
+    <div class="grp"><span class="e">方案 B</span><h2 class="serif">圆环 Q（环 + 鲸尾）</h2><span class="d">金属确认版 + 新环质感（简洁底·环里无月）</span></div>
+    <div class="sub"><b>★ 重出 · 月光意境 × 科技（环像月光/月晕·无月盘·保虹彩科技感）</b></div>
+    <div class="grid" id="Bmoon"></div>
+    <div class="sub" style="color:var(--ink3)">金属环·换色实测（结论：换色救不了，材质问题；仅「虹彩珍珠」有点科技感）</div>
+    <div class="grid" id="Bmetalcolor"></div>
+    <div class="sub" style="color:var(--ink3)">确认·金属版（参考）</div>
+    <div class="grid" id="Bmetal"></div>
+  </div>
+
+  <!-- C 满月 -->
+  <div class="plan">
+    <div class="grp"><span class="e">方案 C</span><h2 class="serif">满月（月亮主角 + 鲸尾 = 大写 Q）</h2></div>
+    <div class="sub"><b>满月 · 鲸尾好（月亮主角 + 鲸尾 = Q）</b></div>
+    <div class="grid" id="Cold"></div>
+    <div class="sub">月+鲸+大写Q（月干净·背景简洁·鲸尾右下读成Q）</div>
+    <div class="grid" id="Clatest"></div>
+  </div>
+
+  <!-- 方案 D -->
+  <div class="plan">
+    <div class="grp"><span class="e">方案 D</span><h2 class="serif">暖月 + 鲸尾（Claude 暖系扩展）</h2><span class="d">原型 + 换配色</span></div>
+    <div class="grid" id="planD"></div>
+  </div>
+  <!-- 方案 E -->
+  <div class="plan">
+    <div class="grp"><span class="e">方案 E</span><h2 class="serif">大写 Q 字 + 鲸尾</h2><span class="d">原型 + 换配色</span></div>
+    <div class="grid" id="planE"></div>
+  </div>
+  <!-- 方案 G -->
+  <div class="plan">
+    <div class="grp"><span class="e">方案 G</span><h2 class="serif">醒图渐变 · 月光色（模糊→清晰）</h2><span class="d">月光发光球(模糊渐变到清晰) + 右下从清晰到模糊的鲸尾</span></div>
+    <div class="grid" id="planG"></div>
+  </div>
+</div>
+
+<script>
+function cell(label,file){
+  return '<div class="sw"><div class="icon"><img src="logo-gen/'+file+'.png" alt="" onerror="this.style.display=\'none\';this.parentNode.innerHTML=\'<div class=&quot;pending&quot;><div class=&quot;dot&quot;></div>生成中…</div>\'"></div><span class="lbl">'+label+'</span></div>';
+}
+function fill(id,items){document.getElementById(id).innerHTML=items.map(function(c){return cell(c[0],c[1]);}).join('');}
+
+fill('A',[["日食·金A","r3-eclipse-a"],["日食·金B","r3-eclipse-b"],["日食·金(净)","r10-eclipse-gold"],["日食·银","r10-eclipse-silver"]]);
+fill('Bmoon',[["月光虹彩环","r24-moon-irid"],["银月光环","r24-moon-silver"],["月晕环","r24-moon-halo"],["极光月环","r24-moon-aurora"],["暖金月光环","r24-moon-gold"],["弦月环","r24-moon-crescent"]]);
+fill('Bmetalcolor',[["银","r26-silver"],["虹彩珍珠","r26-irid"],["白瓷","r26-white"],["古铜","r26-bronze"],["枪灰","r26-gunmetal"]]);
+fill('Bmetal',[["金属银·黑","r4-q-silver-a"],["金属银·藏蓝","r10-ring-silver-navy"]]);
+fill('Clatest',[["金B(推)","r21-gold-b"],["金A","r21-gold-a"],["强光晕","r21-glow"],["暖白月","r21-warmwhite"],["冷银月","r21-silver"],["金月·藏蓝底","r21-navy"]]);
+fill('Cold',[["满月金A","r18-c-gold-a"],["满月金B","r18-c-gold-b"],["满月银","r18-c-silver"],["简化金月·黑","r19-c-smooth-gold"],["简化银月·黑","r19-c-smooth-silver"],["扁平金月·黑","r19-c-flat-gold"]]);
+fill('planD',[["原型(Claude暖)","r23-claude-a"],["陶土","r25-d-clay"],["金月/藏蓝","r40-d-gold-navy"],["莫兰迪·灰蓝","r39-d-morandi-blue"],["莫兰迪·陶灰","r39-d-morandi-clay"],["浅金/午夜蓝","r38-d-midnight"]]);
+fill('planE',[["原型","r34-e-origin"],["金Q/藏蓝","r34-e-gold-navy"],["蓝Q/奶油","r34-e-navy-cream"],["陶土/奶油","r34-e-clay-cream"],["单色墨/奶油","r25-f-mono-cream"],["单色白/藏蓝","r25-f-white-navy"]]);
+fill('planG',[["左尾·银","r35-g-left-silver"],["左尾·金(光滑)","r36-g-left-gold"],["左尾·低饱和黄","r37-g-left-muted"],["右尾·银","r35-g-right-silver"],["右尾·金(光滑)","r36-g-right-gold"],["右尾·低饱和黄","r37-g-right-muted"],["奶油黄·D形状","r39-g-cream"]]);
+
+// 官网不动，◀▶ 只切换上面的 logo
+(function(){
+  var LOGOS=[
+    ["G·左尾银月光","r35-g-left-silver"],["G·右尾银月光","r35-g-right-silver"],["G·左尾金(光滑)","r36-g-left-gold"],["G·右尾金(光滑)","r36-g-right-gold"],["G·左尾低饱和黄","r37-g-left-muted"],["G·右尾低饱和黄","r37-g-right-muted"],
+    ["C·满月金B","r21-gold-b"],["C·满月冷银","r21-silver"],["C·满月金A","r18-c-gold-a"],["C·满月扁平金","r29-flat-navy"],
+    ["E·大写Q金/藏蓝","r34-e-gold-navy"],["E·大写Q原型","r34-e-origin"],["E·大写Q蓝/奶油","r34-e-navy-cream"],
+    ["D·Claude暖","r23-claude-a"],["D·金月藏蓝","r25-d-gold-navy"],
+    ["F·单色Q墨/奶油","r25-f-mono-cream"],["F·单色Q白/藏蓝","r25-f-white-navy"],
+    ["B·圆环月光金","r24-moon-gold"],["B·圆环虹彩","r24-moon-irid"],["B·圆环金属银","r4-q-silver-a"],
+    ["A·日食金","r3-eclipse-a"],["A·日食银","r10-eclipse-silver"]
+  ];
+  var i=0,nav=document.getElementById('navlogo'),moon=document.getElementById('moonlogo'),lbl=document.getElementById('logolabel');
+  function set(){var l=LOGOS[i],src='logo-gen/'+l[1]+'.png';
+    nav.onerror=moon.onerror=function(){this.onerror=null;this.src='logo-gen/r21-gold-b.png';};
+    nav.src=src;moon.src=src;lbl.textContent=l[0]+'　'+(i+1)+'/'+LOGOS.length;}
+  var p=document.getElementById('prevLogo'),n=document.getElementById('nextLogo');
+  if(p)p.onclick=function(){i=(i-1+LOGOS.length)%LOGOS.length;set();};
+  if(n)n.onclick=function(){i=(i+1)%LOGOS.length;set();};
+  if(nav)set();
+})();
+(function(){ if(document.querySelectorAll('.pending').length>0){ setTimeout(function(){location.reload();},6000); } })();
+</script>
+</body>
+</html>
