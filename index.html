@@ -47,6 +47,19 @@ h1{font-family:var(--serif);font-size:clamp(22px,4vw,32px);font-weight:600;margi
 .history>summary:before{content:"▸ ";color:var(--gold)}
 .history[open]>summary:before{content:"▾ "}
 .history>summary:hover{color:var(--gold)}
+.lockwrap{display:flex;flex-wrap:wrap;gap:16px;margin-top:6px}
+.lockcard{background:#0c0c10;border:1px solid var(--line);border-radius:16px;padding:36px 30px;display:flex;flex-direction:column;align-items:center;gap:16px;flex:1;min-width:240px}
+.lockcard.light{background:#f4f2ec;border-color:#e4e0d6}
+.lockup{display:flex;align-items:center;gap:16px}
+.lockup.v{flex-direction:column;gap:16px}
+.lkicon{width:60px;height:60px;border-radius:14px;display:block;flex:none}
+.lockup.v .lkicon{width:96px;height:96px;border-radius:22px}
+.wm{font-family:var(--sans);font-size:30px;font-weight:600;letter-spacing:-.015em;color:#f2f0ea;line-height:1;white-space:nowrap}
+.lockcard.light .wm{color:#1b1b1e}
+.wm .d{color:var(--gold);font-weight:600}
+.wm.up{font-size:21px;letter-spacing:.3em;font-weight:500;text-transform:uppercase}
+.wm.thin{font-weight:400;letter-spacing:.02em}
+.lklbl{font-family:var(--mono);font-size:11px;color:var(--ink3)}
 .scenes{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 16px;-webkit-overflow-scrolling:touch}
 .scenes::-webkit-scrollbar{height:7px}.scenes::-webkit-scrollbar-thumb{background:rgba(255,255,255,.14);border-radius:7px}
 .scene{scroll-snap-align:center;flex:0 0 auto;width:min(720px,84vw);border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#0c0c10}
@@ -136,6 +149,29 @@ h1{font-family:var(--serif);font-size:clamp(22px,4vw,32px);font-weight:600;margi
     <div class="grid" id="extBlue"></div>
   </div>
 
+  <!-- ★ qijing.ai 字符组合 lockup -->
+  <div class="plan">
+    <div class="grp"><span class="e">★ 字符组合</span><h2 class="serif">qijing.ai · 图标 + 字标锁版</h2><span class="d">日食环 Q 搭 qijing.ai 字标（字体待定，先看排布）</span></div>
+    <div class="lockwrap">
+      <div class="lockcard">
+        <div class="lockup h"><img class="lkicon lkmark" src="logo-gen/r48-ring-a.png" onerror="this.onerror=null;this.src='logo-gen/r47-eclipse-white.png'" alt=""><span class="wm">qijing<span class="d">.ai</span></span></div>
+        <span class="lklbl">横版 · 小写几何（.ai 暖金）</span>
+      </div>
+      <div class="lockcard">
+        <div class="lockup h"><img class="lkicon lkmark" src="logo-gen/r48-ring-a.png" onerror="this.onerror=null;this.src='logo-gen/r47-eclipse-white.png'" alt=""><span class="wm up">qijing.ai</span></div>
+        <span class="lklbl">横版 · 大写字距</span>
+      </div>
+      <div class="lockcard">
+        <div class="lockup v"><img class="lkicon lkmark" src="logo-gen/r48-ring-a.png" onerror="this.onerror=null;this.src='logo-gen/r47-eclipse-white.png'" alt=""><span class="wm thin">qijing<span class="d">.ai</span></span></div>
+        <span class="lklbl">竖版 · 细体</span>
+      </div>
+      <div class="lockcard light">
+        <div class="lockup v"><img class="lkicon lkmark" src="logo-gen/r48-ring-a.png" onerror="this.onerror=null;this.src='logo-gen/r47-eclipse-white.png'" alt=""><span class="wm">qijing<span class="d">.ai</span></span></div>
+        <span class="lklbl">浅底 · app 场景</span>
+      </div>
+    </div>
+  </div>
+
   <details class="history">
     <summary>📁 历史记录 · 早期探索方案 A–G（点开展开，不再平铺）</summary>
 
@@ -198,7 +234,7 @@ fill('Cold',[["满月金A","r18-c-gold-a"],["满月金B","r18-c-gold-b"],["满�
 fill('planD',[["原型(Claude暖)","r23-claude-a"],["陶土","r25-d-clay"],["金月/藏蓝","r40-d-gold-navy"],["莫兰迪·灰蓝","r39-d-morandi-blue"],["莫兰迪·陶灰","r39-d-morandi-clay"],["浅金/午夜蓝","r38-d-midnight"]]);
 fill('planE',[["原型","r34-e-origin"],["金Q/藏蓝","r34-e-gold-navy"],["蓝Q/奶油","r34-e-navy-cream"],["陶土/奶油","r34-e-clay-cream"],["单色墨/奶油","r25-f-mono-cream"],["单色白/藏蓝","r25-f-white-navy"]]);
 fill('planG',[["左尾·银","r35-g-left-silver"],["左尾·金(光滑)","r36-g-left-gold"],["左尾·低饱和黄","r37-g-left-muted"],["右尾·银","r35-g-right-silver"],["右尾·金(光滑)","r36-g-right-gold"],["右尾·低饱和黄","r37-g-right-muted"],["奶油黄·D形状","r39-g-cream"]]);
-fill('extEclipse',[["白 ★新","r47-eclipse-white"],["冰蓝 ★新","r47-eclipse-icyblue"],["天蓝 ★新","r47-eclipse-skyblue"],["冷钢蓝 ★新","r47-eclipse-steelblue"],["简洁·金A","r45-eclipse-simple-a"],["简洁·金B","r45-eclipse-simple-b"],["大光斑·金","r42-eclipse-bigspot-gold"],["更大光斑·金A","r44-eclipse-biggerspot-a"],["更大光斑·金B","r44-eclipse-biggerspot-b"],["大光斑·银","r42-eclipse-bigspot-silver"]]);
+fill('extEclipse',[["精修·白A ★","r48-ring-a"],["精修·白B ★","r48-ring-b"],["精修·白C ★","r48-ring-c"],["精修·冰蓝 ★","r48-ring-icy"],["白","r47-eclipse-white"],["冰蓝","r47-eclipse-icyblue"],["天蓝","r47-eclipse-skyblue"],["冷钢蓝","r47-eclipse-steelblue"],["简洁·金A","r45-eclipse-simple-a"],["简洁·金B","r45-eclipse-simple-b"],["大光斑·金","r42-eclipse-bigspot-gold"],["更大光斑·金A","r44-eclipse-biggerspot-a"],["更大光斑·金B","r44-eclipse-biggerspot-b"],["大光斑·银","r42-eclipse-bigspot-silver"]]);
 fill('extWhale',[["纯平月·金 ★新","r45-whale-flat-gold"],["纯平月·白 ★新","r45-whale-flat-white"],["光滑月·金","r44-whale-smooth-gold"],["光滑月·银","r44-whale-smooth-silver"]]);
 fill('extCream',[["奶油黄(原)","r39-g-cream"],["暖金","r43-warmgold"],["蜜桃","r43-peach"],["象牙白","r43-ivory"],["冷蓝","r43-coolblue"],["强Q读感","r43-creamQ"]]);
 fill('extBlue',[["纯白","r46-white"],["冰蓝白","r46-icyblue"],["天蓝","r46-skyblue"],["长春花蓝","r46-periwinkle"],["冷钢蓝","r46-steelblue"]]);
